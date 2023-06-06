@@ -1,0 +1,106 @@
+@font-face {
+  font-family: "Fraunces", serif;
+  src: url("./assets/fonts/fraunces/Fraunces-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Manrope", sans-serif;
+  src: url("./assets/fonts/manrope/Manrope-VariableFont_wght.ttf")
+    format("truetype");
+}
+
+:root {
+  --clr-purple: hsl(273, 85%, 13%);
+  --clr-green: hsl(150, 100%, 63%);
+  --clr-grey: hsl(271, 12%, 34%);
+
+  --clr-white-1: hsl(0, 0%, 100%);
+  --clr-white-2: hsl(276, 100%, 99%);
+
+  --ff-body: "Manrope", sans-serif;
+  --ff-heading: "Fraunces", serif;
+}
+
+/* CSS Reset and Base Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--ff-body);
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: var(--clr-purple);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--ff-heading);
+  font-weight: 600;
+  color: var(--clr-purple);
+}
+
+h1 {
+  font-size: 8rem;
+  line-height: 80px;
+}
+
+h2 {
+  font-size: 5.6rem;
+  line-height: 64px;
+}
+
+h3 {
+  font-size: 3.2rem;
+  line-height: 40px;
+}
+
+/* Utility Classes */
+.flex-row {
+  display: flex;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--clr-green);
+  color: var(--clr-white-1);
+}
+
+.btn-primary:hover {
+  background-color: var(--clr-purple);
+  border: 2px solid var(--clr-green);
+  color: var(--clr-green);
+}
+
+.btn .text-center {
+  text-align: center;
+}
