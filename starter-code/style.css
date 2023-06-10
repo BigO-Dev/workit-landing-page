@@ -47,6 +47,15 @@ body {
   color: var(--clr-purple);
 }
 
+a {
+  text-decoration: none;
+  color: var(--clr-purple);
+}
+
+button {
+  cursor: pointer;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -82,9 +91,9 @@ h3 {
 
 .hero {
   background-color: var(--clr-purple);
-  min-height: 100vh;
   clip-path: ellipse(100% 80% at 50% 0%);
   position: relative;
+  height: 100vh;
 }
 
 .hero__row {
@@ -95,14 +104,13 @@ h3 {
   padding-block: 5.8rem;
 }
 
-.header__btn a {
+.btn__secondary a {
   color: var(--clr-white-1);
-  text-decoration: none;
   border-bottom: 3px solid var(--clr-green);
   padding-bottom: 0.5rem;
 }
 
-.header__btn a:hover {
+.btn__secondary a:hover {
   color: var(--clr-green);
 }
 
@@ -119,28 +127,33 @@ h3 {
   border-bottom: 3px solid var(--clr-green);
 }
 
-.btn__primary {
+.btn__primary a {
   background-color: var(--clr-green);
   color: var(--clr-purple);
   font-size: 1.8rem;
-  font-weight: 500;
+  font-weight: 700;
   border: none;
-  padding: 1.3rem 3.2rem;
+  padding: 2rem 3rem;
   width: 16rem;
   height: 6rem;
 }
 
-.btn__primary a {
-  text-decoration: none;
+.btn__primary a:hover {
+  background-color: var(--clr-purple);
+  color: var(--clr-green);
+  border: 1px solid var(--clr-green);
 }
 
+/* Make image appear over hero */
+/* The hero is hiding the bottom of the image */
+
 .hero__image {
-  text-align: center;
-  object-fit: cover;
   position: absolute;
-  top: 50%;
   left: 50%;
-  transform: translate(-50%, 10%);
+  top: 75%;
+  transform: translate(-50%, -50%);
+  bottom: 0;
+  z-index: 1;
 }
 
 .hero__pattern-1 {
